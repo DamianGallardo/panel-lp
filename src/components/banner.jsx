@@ -3,6 +3,7 @@ import React from 'react'
 import { Box, Container, Typography } from '@mui/material';
 // import { AnimatedText } from './AnimatedText';
 import { useState, useEffect } from 'react';
+import Form from './form';
 
 
 export default function Banner({ img, title }) {
@@ -27,7 +28,8 @@ export default function Banner({ img, title }) {
       <>
         <Box
           sx={{
-            height: "600px",
+            height: "100vh",
+            width: "100%",
             backgroundImage: `url("${img}")`,
             backgroundSize: "cover",
             backgroundPosition: "center center", // Ensure the image is fully centered
@@ -53,24 +55,7 @@ export default function Banner({ img, title }) {
                 marginBottom: "30px",
               }}
             >
-              <Typography
-              sx={{
-                fontWeight: 700,
-                letterSpacing: "0.1em",
-                textAlign: "center",
-                color: "#fff",
-                fontSize: "2.5rem",
-                pb: "20px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                textTransform: "uppercase",
-                pt: "20px",
-              }}
-              >
-                {/* <AnimatedText text={title} /> */}
-                {title}
-              </Typography>
+              <Form />
             </Box>
           </Container>
         </Box>
