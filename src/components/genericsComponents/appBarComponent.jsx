@@ -14,9 +14,9 @@ export default function AppBarComponent() {
   // Calcula el color de fondo solo cuando cambian `pathname` o `scrolled`
   const backgroundColorState = useMemo(() => {
     if (pathname === '/') {
-      return scrolled ? '#323750' : 'transparent';
+      return scrolled ? '#0055B8' : 'transparent';
     }
-    return '#323750';
+    return '#0055B8 ';
   }, [pathname, scrolled]);
 
   const handleDrawerToggle = () => setDrawerOpen(!drawerOpen);
