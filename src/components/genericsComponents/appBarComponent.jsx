@@ -43,15 +43,15 @@ export default function AppBarComponent() {
         sx={{
           backgroundColor: backgroundColorState,
           transition: 'background-color 0.3s ease', // Transición suave
-          height: '70px',
-          paddingTop: '0px',  
+          height: '60px',
+          paddingTop: '10px',  
           justifyContent: 'center',
           boxShadow: 'none',
         }}
       >
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Box display="flex" justifyContent={{md:'center',xs:'space-between'}} alignItems="center" width="100%">
+            <Box display="flex" justifyContent={{md:'space-around' ,xs:'space-aroud'}} alignItems="center" width="100%" height={'100%'} >
               <Box display="flex" alignItems="center" paddingRight={'10px'}>
                 <Link href="/">
                  <img src="/assets/icons/TensaBuilding-Blanco-Horizontal.png" width={160} height={160} alt="Logo" />
@@ -62,14 +62,10 @@ export default function AppBarComponent() {
                   <Link key={index} href={item.href}>
                     <Typography
                         sx={{
-                            cursor: 'pointer',
-                            ml: 2,
-                            background: 'linear-gradient(110.3deg, rgba(72,85,99,1) 8.8%, rgba(127,146,166,1) 95.1%)',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
-                            fontSize: '24px', // Tamaño de la fuente
+                            ml: 3,
+                            color: 'white',
+                            fontSize: '18px', // Tamaño de la fuente
                             letterSpacing: '0.15em', // Espaciado entre letras
-                            fontWeight: 600, // Peso de la fuente
                         }}
                         >
                       {item.text}

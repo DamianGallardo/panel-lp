@@ -14,6 +14,8 @@ export default function Home() {
         }}
       >
         <Banner img={"/assets/DSC_0573.JPG"} />
+        <Banner img={"/assets/DSC_0573.JPG"} />
+        <Banner img={"/assets/DSC_0573.JPG"} />
       </Box>
     </>
   );
