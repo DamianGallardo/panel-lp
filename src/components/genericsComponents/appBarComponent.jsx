@@ -54,7 +54,7 @@ export default function AppBarComponent() {
             <Box display="flex" justifyContent={{md:'space-around' ,xs:'space-aroud'}} alignItems="center" width="100%" height={'100%'} >
               <Box display="flex" alignItems="center" paddingRight={'10px'}>
                 <Link href="/">
-                 <img src="/assets/icons/TensaBuilding-Blanco-Horizontal.png" width={160} height={160} alt="Logo" />
+                 <img src="" width={160} height={160} alt="Logo" />
                 </Link>
               </Box>
               <Box display={{ xs: 'none', md: 'flex' }} alignItems="center">

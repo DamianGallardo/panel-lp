@@ -4,19 +4,27 @@
 
 :root {
   --background: #0055b8;
-  --foreground: #0055b8;
+  --foreground: #f9f9f9;
+  --line-color: #012750; /* Color de las líneas grises */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0055b8;
-    --foreground: #0055b8;
+    --foreground: #f4f4f4;
+    --line-color: #012750; /* Color de las líneas grises */
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
+  background-image: linear-gradient(
+    to right,
+    var(--line-color) .5px,
+    transparent .2px
+  );
+  background-size: 200px 50%; 
   font-family: Arial, Helvetica, sans-serif;
 }
 
