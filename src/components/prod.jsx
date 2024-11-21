@@ -1,27 +1,32 @@
 import React from 'react'
 import { Box, Card, Container, Grid, Typography, CardMedia} from '@mui/material'
+import AnimatedBox from './genericsComponents/AnimatedBox';
 
 export default function Prod() {
 
     const Item = [
         {
             name: "Panel Tipo Sandwich",
-            desc: "Contamos con un amplio stock de productos de la mejor calidad",
+            title: "Contamos con un amplio stock de productos de la mejor calidad",
+            description: "Contamos con un amplio stock de productos de la mejor calidad",
             img: "/assets/cards/glamet-.png.webp",
         },
         {
             name: "Panel Tipo Sandwich",
-            desc: "Contamos con un amplio stock de productos de la mejor calidad",
+            title: "Contamos con un amplio stock de productos de la mejor calidad",
+            description: "Contamos con un amplio stock de productos de la mejor calidad",
             img: "/assets/cards/lamina-ondulada-o100-aceroscrea.png",
         },
         {
             name: "Panel Tipo Sandwich",
-            desc: "Contamos con un amplio stock de productos de la mejor calidad",
-            img: "/assets/cards/glamet-.png.webp",
+            title: "Contamos con un amplio stock de productos de la mejor calidad",
+            description: "Contamos con un amplio stock de productos de la mejor calidad",
+            img: "/assets/cards/medidas-galvatecho.png",
         },
         {
             name: "Panel Tipo Sandwich",
-            desc: "Contamos con un amplio stock de productos de la mejor calidad",
+            title: "Contamos con un amplio stock de productos de la mejor calidad",
+            description: "Contamos con un amplio stock de productos de la mejor calidad",
             img: "/assets/cards/glamet-.png.webp",
         },
     ]
@@ -30,7 +35,6 @@ return (
   <Box
     sx={{
       display: "flex",
-      height: "100vh",
       width: "100%",
       flexDirection: "column",
       mt: "74px",
@@ -82,31 +86,60 @@ return (
       </Grid>
       <Grid container spacing={3} mt={'20px'}>
         {Item.map((item, index) => (
-        <Grid item xs={12} sm={3} md={3} key={index} >
-        <Card
-        elevation={0}
-        sx={{bgcolor:"transparent"}}
-        >
-        <Typography
-          sx={{
-            fontFamily: "Gasoek One",
-            fontSize: "40px",
-            fontWeight: 400,
-            textAlign: "center",
-            textTransform: "uppercase",
-            color: "white",
+            <Grid item xs={12} sm={12} md={12} key={index}>
+            <AnimatedBox>
+        <Box
+            sx={{
+            display: "flex",
+            width: "100%",
+            height: "100%",
+            justifyContent: "space-between",
             mt: 5,
-          }}
+            }}
         >
-            {item.name}
-        </Typography>
-        <CardMedia
-            component="img"
-            height="140"
-            image={item.img}
-            alt={item.name}
-        />
-        </Card>
+            <Card
+            elevation={0}
+            sx={{
+                bgcolor:"transparent",
+                width: "500px",
+            }}
+            >
+            <Typography
+            sx={{
+                fontFamily: "Gasoek One",
+                fontSize: "40px",
+                fontWeight: 400,
+                textAlign: "center",
+                textTransform: "uppercase",
+                color: "white",
+                mt: 5,
+                }}
+                >
+                {item.name}
+            </Typography>
+            <CardMedia
+                component="img"
+                image={item.img}
+                alt={item.name}
+                />
+            </Card>
+            <Box
+            sx={{
+                display: "flex",
+                flexDirection: "column",
+                height: "100%",
+                mt: 5,
+                }}
+            >
+            <Typography sx={{color: "white", mt: 5, textAlign: "left",fontSize:"30px" }}>
+                {item.title}
+            </Typography>
+            <Typography sx={{color: "white", mt: 5, textAlign: "left"}}>
+                {item.description}
+            </Typography>
+            </Box>
+        </Box>
+      </AnimatedBox>
       </Grid>
         ))}
         </Grid>
